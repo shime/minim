@@ -1,0 +1,7 @@
+{
+  "name": "minim",
+  "private": true,
+  "dependencies": {
+    "normalize.css": "~3.0.1"
+  }
+}
