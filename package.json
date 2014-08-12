@@ -4,7 +4,7 @@
   "description": "Minimal collaborative markdown editing",
   "main": "index.js",
   "scripts": {
-      "start": "node ./bin/www"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -17,13 +17,24 @@
   },
   "homepage": "https://github.com/shime/minim",
   "dependencies": {
-    "express": "~4.2.0",
-    "static-favicon": "~1.0.0",
-    "morgan": "~1.0.0",
-    "cookie-parser": "~1.0.1",
     "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
     "debug": "~0.7.4",
+    "express": "~4.2.0",
     "jade": "~1.3.0",
+    "marked": "^0.3.2",
+    "morgan": "~1.0.0",
+    "static-favicon": "~1.0.0",
     "stylus": "0.42.3"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.4.0",
+    "express": "^4.2.0",
+    "gulp-browserify": "^0.5.0",
+    "gulp-concat": "^2.3.4",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-jshint": "^1.8.4",
+    "gulp-livereload": "^2.1.0",
+    "tiny-lr": "^0.1.0"
   }
 }
