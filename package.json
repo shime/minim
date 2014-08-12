@@ -1,0 +1,22 @@
+{
+  "name": "minim",
+  "version": "0.0.0",
+  "description": "Minimal collaborative markdown editing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shime/minim.git"
+  },
+  "author": "Hrvoje Simic",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/shime/minim/issues"
+  },
+  "homepage": "https://github.com/shime/minim",
+  "dependencies": {
+    "express": "^4.8.3"
+  }
+}
