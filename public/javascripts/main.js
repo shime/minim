@@ -1,5 +1,40 @@
-var unique = require('uniq');
+var marked = require('marked')
 
-var data = [1, 2, 2, 3, 4, 5, 5];
+function mainPresenter(element, options){
+  element = $(element)
+  var template = options.template,
+      model = options.model,
+      result = $('.right')
+  
+  model.on("change", rerender)
 
-console.log(unique(data));
+  element.on('keyup', '.left > textarea', function(){
+    model.change(this.value)
+  })
+
+  function rerender(){
+    var data = {
+      text: marked(model.value)
+    }
+    result.html(riot.render(template, data))
+  }
+}
+
+function Entry(){
+  var self = riot.observable(this)
+  self.change = function(value){
+    self.value = value
+    self.trigger('change')
+  }
+}
+
+$(function(){
+  var model = new Entry()
+
+  mainPresenter($("body"), {
+    template: $("#main-template").html(),
+    model: model
+  })
+
+  $('textarea').focus()
+})

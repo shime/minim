@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 gulp.task('lint', function() {
-  gulp.src(['./**/*.js', '!./node_modules/**', '!./dist/**'])
+  gulp.src(['./**/*.js', '!./node_modules/**', '!./dist/**', '!./public/vendor/**'])
   .pipe(jshint())
   .pipe(jshint.reporter('default'));
 });
@@ -20,7 +20,7 @@ gulp.task('browserify', function() {
 });
 
 gulp.task('watch', ['lint'], function() {
-  gulp.watch(['./**/*.js', '!./node_modules/**', '!./dist/**'], [
+  gulp.watch(['./**/*.js', '!./node_modules/**', '!./dist/**', '!./public/vendor/**'], [
     'lint'
   ]);
 
