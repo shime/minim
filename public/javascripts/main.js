@@ -1,5 +1,8 @@
 var marked = require('marked')
 
+require('riotjs')
+riot = window.riot
+
 function mainPresenter(element, options){
   element = $(element)
   var template = options.template,
