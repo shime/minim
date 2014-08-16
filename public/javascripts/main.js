@@ -1,7 +1,6 @@
 var marked = require('marked')
 
-require('riotjs')
-riot = window.riot
+var riot = require('riotjs')
 
 function mainPresenter(element, options){
   element = $(element)
