@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/nodemon --debug bin/www",
-    "postinstall": "node_modules/.bin/bower install"
+    "postinstall": "node_modules/.bin/bower install",
+    "test": "node test/*"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "gulp-jshint": "^1.8.4",
     "gulp-livereload": "^2.1.0",
     "nodemon": "^1.2.1",
+    "supertest": "^0.13.0",
     "tiny-lr": "^0.1.0"
   }
 }

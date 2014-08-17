@@ -11,7 +11,6 @@ marked.setOptions({
   }
 })
 
-
 function mainPresenter(element, options){
   element = $(element)
   var template = options.template,
