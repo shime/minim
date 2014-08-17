@@ -1,6 +1,16 @@
 var marked = require('marked')
+    riot = require('riotjs')
+    highlighter = require('highlight.js')
 
-var riot = require('riotjs')
+marked.setOptions({
+  gfm: true,
+  tables: true,
+  breaks: true,
+  highlight: function (code) {
+    return highlighter.highlightAuto(code).value;
+  }
+})
+
 
 function mainPresenter(element, options){
   element = $(element)
