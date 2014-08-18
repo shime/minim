@@ -19,7 +19,7 @@ gulp.task('browserify', function() {
   .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('watch', ['lint'], function() {
+gulp.task('watch', ['browserify', 'lint'], function() {
   gulp.watch(['./**/*.js', '!./node_modules/**', '!./dist/**', '!./public/vendor/**'], [
     'lint'
   ]);

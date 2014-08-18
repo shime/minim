@@ -19,7 +19,7 @@ function mainPresenter(element, options){
   
   model.on("change", rerender)
 
-  element.on('keyup', '.left > textarea', function(){
+  element.on('keyup', function(){
     model.change(this.value)
   })
 
@@ -42,7 +42,7 @@ function Entry(){
 $(function(){
   var model = new Entry()
 
-  mainPresenter($("body"), {
+  mainPresenter($("textarea"), {
     template: $("#main-template").html(),
     model: model
   })
