@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node_modules/.bin/nodemon --debug bin/www",
     "postinstall": "node_modules/.bin/bower install",
-    "test": "node test/*"
+    "test": "node test/backend.js && node_modules/.bin/testem ci"
   },
   "repository": {
     "type": "git",
