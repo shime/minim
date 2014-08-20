@@ -1,7 +1,6 @@
 var riot = require('riotjs'),
     marked = require('marked'),
-    highlighter = require('highlight.js'),
-    history = require('history.js')
+    highlighter = require('highlight.js')
 
 marked.setOptions({
   gfm: true,
